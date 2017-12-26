@@ -1,0 +1,33 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="ajax-bitcoin.js" defer></script>
+  <style>
+    #price, #code {
+      color: green;
+    }
+  </style>
+  <title>AJAX-bitcoin</title>
+</head>
+
+<body>
+
+  <h1>Bitcoin Current Price is:
+    <span id="price"></span>
+    <span id="code"></span>
+  </h1>
+
+  <button id="btn">Refresh Price</button>
+
+  Currency Selection:
+  <button class="radios" type="radio" value="USD">USD</button>
+
+  <button class="radios" type="radio" value="GBP">GBP</button>
+
+  <button class="radios" type="radio" value="EUR">EUR</button>
+</body>
+
+</html>
