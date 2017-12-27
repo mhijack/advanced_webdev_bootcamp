@@ -5,6 +5,7 @@ function Person(name) {
 // prototype chain
 Person.prototype.isMale = true;
 
+// 'new' sets __proto__ property of the empty object to constructor's .prototype
 const jack = new Person('Jack');
 
 console.log(jack.__proto__ === Person.prototype); // true
