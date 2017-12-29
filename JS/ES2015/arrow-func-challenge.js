@@ -59,12 +59,14 @@ Example:
 
 const createStudentObj = (firstName, lastName) => {
   const obj = {};
-
   obj['firstName'] = firstName;
   obj['lastName'] = lastName;
 
   return obj;
-}
+};
+
+// if want to return an object literal, enclose it with parentheses
+const createStudentObj2 = (firstName, lastName) => ({firstName: firstName, lastName: lastName});
 
 /* 5 - Given the following code:
 
