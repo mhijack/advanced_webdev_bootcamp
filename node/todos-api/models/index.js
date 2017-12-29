@@ -7,4 +7,8 @@ mongoose.connect('mongodb://localhost/todo-api');
 // tell mongoose we're using Promise methods
 mongoose.Promise = Promise;
 
-module.exports.Todo = require('./todo');
+// the following 2 ways of exporting are equivalent
+exports.Todo = require('./todo');
+
+module.exports = exports;
+// module.exports.Todo = require('./todo');

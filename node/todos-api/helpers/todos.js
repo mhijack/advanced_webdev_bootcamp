@@ -57,3 +57,4 @@ exports.removeTodo = (req, res) => {
 };
 
 module.exports = exports;
+// changing exports.func to module.exports.func will not affect functionality. module.exports = exports;
