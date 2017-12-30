@@ -26,6 +26,12 @@ for (val of map) {
     if anything in the iterator, keys.next().done === false;
     if iteration is over, keys.next().done === true;
 
+When to use?
+1. need to look up keys dynamically (not hard coded strings);
+2. if need keys that are not strings;
+3. frequently adding and removing key/value pairs;
+4. operating on multiple keys at a time;
+
 ======= WeakMaps ========
 1. like maps, but all the keys are objects
 2. cannot be iterated over
