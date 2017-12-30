@@ -37,11 +37,13 @@ class Student2 {
   }
 
   // instance methods - inside class with Object Shorthand Notation
+  // sum.sayHello()
   sayHello() {
     return `Hello ${this.first} ${this.last}`;
   }
 
   // static methods - equivalent to class methods in ES5
+  // Student.isStudent(sum)
   static isStudent(obj) {
     // similar to Array.isArray
     return obj.constructor === Student2;
