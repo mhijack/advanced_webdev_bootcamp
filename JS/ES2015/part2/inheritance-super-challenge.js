@@ -27,26 +27,28 @@ class Vehicle {
   }
 
   toString() {
-      return `The make, model, and year are ${this.make} ${this.model} ${this.year}`
+    return `The make, model, and year are ${this.make} ${this.model} ${
+      this.year
+    }`;
   }
 }
 
 class Car extends Vehicle {
-    // inherits all properties and methods from Vehicle
-    constructor(make, model, year) {
-        super(make, model, year);
+  // inherits all properties and methods from Vehicle
+  constructor(...args) {
+    super(...args);
 
-        // Car's unique property
-        this.numWheels = 4;
-    }
+    // Car's unique property
+    this.numWheels = 4;
+  }
 }
 
 class Motorcycle extends Vehicle {
-    constructor(make, model, year) {
-        super(make, model, year);
+  constructor(...args) {
+    super(...args);
 
-        this.numWheels = 2;
-    }
+    this.numWheels = 2;
+  }
 }
 
 car = new Car('ford', 'mustang', 2018);
