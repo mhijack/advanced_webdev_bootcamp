@@ -192,6 +192,7 @@ function countPairs(arr, number) {
   // iterates over cache
   for (let item of cache) {
     // delete current item from 'catche' (cache's only copy)
+    // delete first, then check: because don't wanna count current + current
     cache.delete(item);
 
     // then check if there's another number in cache that forms a pair with current item
