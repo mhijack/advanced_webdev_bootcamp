@@ -16,6 +16,7 @@ class Student extends Person {
 
     // calls the parent class' constructor with first & last provided for the Person's first and last
     // must be of the same names!
+    // Person.apply(this, arguments)
     super(first, last);
   }
 }
