@@ -7,7 +7,7 @@ function Person(first, last) {
 
 Person.prototype.greet = function() {
   return `Hello ${first} ${last}`;
-}
+};
 
 // instance of Student inherits methods of Person
 function Student(first, last) {
@@ -19,7 +19,7 @@ Student.prototype.constructor = Student;
 
 const jack = new Student('jack', 'chen');
 
-jack.greet // gets the greet method from Person
+jack.greet; // gets the greet method from Person
 
 // ======== ES2015 ========
 class PersonClass {
@@ -35,7 +35,9 @@ class PersonClass {
 
 // with 'extends'
 class StudentClass extends PersonClass {
-
+  constructor(first, last) {
+    super(first, last);
+  }
 }
 
 const chen = new StudentClass('jack', 'chen');
