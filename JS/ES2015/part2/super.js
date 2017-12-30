@@ -9,6 +9,8 @@ class Person {
   }
 }
 
+// Student.prototype = Object.create(Person.prototype);
+// Student.prototype.constructor = Student;
 class Student extends Person {
   constructor(first, last) {
     // super must be called first before using 'this'
