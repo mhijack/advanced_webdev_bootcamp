@@ -37,7 +37,7 @@ function hasMostFollowers(...users) {
   );
 }
 
-// because.then returns a promise, we have to attach another .then() and operate on data inside .then()
+// because .then() returns a promise, we have to attach another .then() and operate on data inside .then()
 hasMostFollowers('mhijack', 'colt', 'tritan').then(data => console.log(data)); // 'user with the most follower is colt'
 
 // Hint - Try to use Promise.all to solve this and remember that the jQuery AJAX methods ($.getJSON, $.ajax, etc.) return a promise.
