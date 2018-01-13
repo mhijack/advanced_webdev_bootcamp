@@ -5,6 +5,7 @@
 1. can only be used within async functions
 2. await pauses the execution of the async function and is followed by a Promise.
 3. waits for the promise to resolve, and then resumes the async function's execution and returns the resolved value
+  therefore, when using multiple 'await', newer async will not run until older asyncs are finished
 
 */
 
