@@ -35,3 +35,29 @@ async function getMovie(first, second) {
 
   movieData.forEach(movie => console.log(movie.year));
 }
+
+// ================================================
+// 'await' simplifies management and readability of asynchronous code
+// position of 'await' determines
+function resolveAfter2Seconds() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('resolved');
+    }, 2000);
+  });
+}
+
+async function asyncCall() {
+  console.log('calling');
+
+  // this line will run, when it resolves, code after will be ran
+  // thus the time 'haha' will be logged differ depending on where it is placed
+  var result = await resolveAfter2Seconds();
+
+  console.log(result);
+      console.log('haha')
+
+  // expected output: "resolved"
+}
+
+asyncCall();
