@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>First React Component</title>
+  <link rel="stylesheet" href="intro.css">
+  <script src="https://unpkg.com/react@16.0.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16.0.0/umd/react-dom.development.js"></script>
+  <!-- used to create DOM elements -->
+  <!-- if using JSX, no longer need react-dom-factories -->
+  <script src="https://unpkg.com/react-dom-factories@1.0.0/index.js"></script>
+  <!-- babel the transpiler -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script type="text/babel">
+
+    // class Pet extends React.Component {
+    //   // every component has a render() method
+    //   // returns some html that we wanna put into the DOM
+    //   render() {
+    //     // ReactDOMFactories.tag(attribute, what's inside h2)
+    //     const h2 = ReactDOMFactories.h2(null, 'Moxie')
+    //     const img = ReactDOMFactories.img({
+    //       src: 'https://github.com/tigarcia/Moxie/raw/master/moxie.png',
+    //       alt: 'A Cat'
+    //     });
+
+    //     // render can only have 1 element returned
+    //     // in this case, returning h2 and img which are wrapped in a div
+    //     return ReactDOMFactories.div(null, h2, img);
+    //   }
+    // }
+
+    // ReactDOM.render(React.createElement(Pet), document.getElementById('app'))
+
+    // ===== refacter =====
+    class Pet extends React.Component {
+      render() {
+        const liStyle = { fontSize: '1.5em' };
+
+        return (
+
+          <div className="card">
+            <h2 className="name">Moxie</h2>
+
+            <img src="https://github.com/tigarcia/Moxie/raw/master/moxie.png" alt="Moxie the Cat" />
+
+            <h5 style={{fontSize: '2em', margin: '2px'}}>Hobbies: </h5>
+
+            <ul>
+              <li style={liStyle}>Eat Fish</li>
+              <li style={liStyle}>Sleep</li>
+            </ul>
+          </div>
+        )
+      }
+    }
+
+    ReactDOM.render(<Pet />, document.getElementById('app'));
+  </script>
+
+</body>
+
+</html>

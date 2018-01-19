@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Tick</title>
+  <script src="https://unpkg.com/react@16.0.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16.0.0/umd/react-dom.development.js"></script>
+  <!-- used to create DOM elements -->
+  <script src="https://unpkg.com/react-dom-factories@1.0.0/index.js"></script>
+  <!-- babel the transpiler -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+
+<body>
+  <div id="clock"></div>
+
+  <script type="text/babel">
+    function tick() {
+      const element = (
+        <div>
+          <h1>Hello, world!</h1>
+          <h2>
+            It is{' '}
+            {new Date().toLocaleTimeString()}.
+          </h2>
+        </div>
+      );
+
+      ReactDOM.render(
+        element,
+        document.getElementById('clock')
+      );
+    }
+
+    setInterval(tick, 1000);
+  </script>
+</body>
+
+</html>
